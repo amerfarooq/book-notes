@@ -25,3 +25,11 @@ result was an exception. The root cause of these exceptions is that TypeScript�
 and reality have diverged. A type system which can guarantee the accuracy of its
 static types is said to be *sound*. TypeScript’s type system is very much not sound, nor
 was it ever intended to be. 
+
+## Item 2: Know Which TypeScript Options You’re Using
+
+1. The TypeScript compiler includes several settings which affect core aspects of the language.
+2. Configure TypeScript using tsconfig.json rather than command-line options.
+3. Turn on `noImplicitAny` unless you are transitioning a JavaScript project to TypeScript.
+4. Use `strictNullChecks` to prevent “undefined is not an object”-style runtime errors.
+5. Aim to enable strict to get the most thorough checking that TypeScript can offer.

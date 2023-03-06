@@ -10,7 +10,7 @@ TypeScript has some syntax of its own, so TypeScript programs are not, in genera
     const x = 2 + '3'; // OK, type is string
     const y = '2' + 3; // OK, type is string
     ```
-      However, this does model the runtime behavior of JavaScript, where both expressions result in the string "23". The type checker does however flags issues in these statements, even though they do not throw exceptions at runtime, because it considers it more likely that the
+      However, this does model the runtime behavior of JavaScript, where both expressions result in the string "23". On the plust side, the type checker will flag issues in these statements, even though they do not throw exceptions at runtime, because it considers it more likely that the
   odd usage is the result of an error than the developer’s intent, so it goes beyond simply modeling the runtime behavior.
 
 3. It is possible for code to pass the type checker but still throw at runtime e.g.:

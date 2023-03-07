@@ -1,4 +1,6 @@
-## Item 1: Understand the Relationship Between TypeScript and JavaScript
+</br>
+<details>
+   <summary><b>1. Understand the Relationship Between TypeScript and JavaScript </b></summary>
 
 1. TypeScript is a superset of JavaScript. In other words, all JavaScript programs are already TypeScript programs.
 TypeScript has some syntax of its own, so TypeScript programs are not, in general, valid JavaScript programs.
@@ -25,15 +27,21 @@ result was an exception. The root cause of these exceptions is that TypeScript�
 and reality have diverged. A type system which can guarantee the accuracy of its
 static types is said to be *sound*. TypeScript’s type system is very much not sound, nor
 was it ever intended to be. 
+  
+</details>
 
-## Item 2: Know Which TypeScript Options You’re Using
+<details>
+   <summary><b>2. Know Which TypeScript Options You’re Using </b></summary>
 
 1. The TypeScript compiler includes several settings which affect core aspects of the language and these can be configured via the `tsconfig.json` file as well as through the command-line.
 1. Turn on the `noImplicitAny` setting to ensure TypeScript doesn't assign the `any` type to a variable when it can't determine its type automatically.
 1. Use `strictNullChecks` to prevent “undefined is not an object”-style runtime errors.
 1. Aim to enable strict to get the most thorough checking that TypeScript can offer.
 
-## Item 3: Understand That Code Generation Is Independent of Types
+</details>  
+  
+<details>
+   <summary><b> 3. Understand That Code Generation Is Independent of Types </b></summary>  
 
 1. The TypeScript compiler has two functions: it transpiles the TypeScript code into JavaScript and checks for type errors. The important thing to note is that these functions are independant of each other. 
 1. Since the transpilation process is seperate, all the actual TypeScript types are erased during compilation to JavaScript and have no affect on the runtime behavior of the code. 
@@ -153,3 +161,5 @@ was it ever intended to be.
       ```
       The `default` case should not be reachable but `boolean` is just a type and goes away at runtime and it is possible that in the JavaScript code, a user might inadvertently call `setLightSwitch` with a value like "ON".
  7. TypeScript's static types have zero runtime overhead, as they are erased when generating JavaScript. This means that TypeScript's static types do not affect runtime performance. However, there are two caveats to this: 1) the TypeScript compiler introduces build time overhead, although compilation is usually fast and there may be options to skip type checking, and 2) the code that TypeScript emits to support older runtimes may incur performance overhead, which is independent of the types themselves. Despite these caveats, TypeScript's static types are generally considered to be a zero-cost feature.
+
+</details>  

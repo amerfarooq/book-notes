@@ -1,4 +1,4 @@
-</br>
+
 <details>
    <summary><b>1. Understand the Relationship Between TypeScript and JavaScript </b></summary>
 
@@ -32,6 +32,7 @@ was it ever intended to be.
 
 <details>
    <summary><b>2. Know Which TypeScript Options You’re Using </b></summary>
+   &nbsp;
 
 1. The TypeScript compiler includes several settings which affect core aspects of the language and these can be configured via the `tsconfig.json` file as well as through the command-line.
 1. Turn on the `noImplicitAny` setting to ensure TypeScript doesn't assign the `any` type to a variable when it can't determine its type automatically.
@@ -42,7 +43,8 @@ was it ever intended to be.
   
 <details>
    <summary><b> 3. Understand That Code Generation Is Independent of Types </b></summary>  
-
+   &nbsp;
+   
 1. The TypeScript compiler has two functions: it transpiles the TypeScript code into JavaScript and checks for type errors. The important thing to note is that these functions are independant of each other. 
 1. Since the transpilation process is seperate, all the actual TypeScript types are erased during compilation to JavaScript and have no affect on the runtime behavior of the code. 
 1. Since types are stripped away during compilation, the compiler can still generate output even when there are type errors in the code. Therefore, TypeScript errors act more like warnings and can point to issues that warrant further investigation, but they won't necessarily stop the build process.
